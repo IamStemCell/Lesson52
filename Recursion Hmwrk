@@ -129,5 +129,21 @@ try:
 except ValueError as e:
     assert str(e) == "This function works only with postive integers"
 
+Task 4
 
+def reverse(input_str: str) -> str:
+
+    """
+
+    Function returns reversed input string
+
+    >>> reverse("hello") == "olleh"
+
+    True
+
+    >>> reverse("o") == "o"
+
+    True
+
+    """
 

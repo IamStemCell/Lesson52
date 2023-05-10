@@ -167,4 +167,16 @@ def sum_of_digits(digit_string: str) -> int:
 
     """
 
+def sum_digits_sub(digits: list[int], index: int) -> int:
+    if index == len(digits):
+        return 0
+    else:
+        return digits[index] + sum_digits_sub(digits, index + 1)
+
+def sum_digits(digit_string: str) -> int:
+    if not digit_string.isdigit():
+        raise ValueError("input string must be digit string")
+    digits = [int(d) for d in digit_string]
+    return sum_digits_sub(digits, 0)
+
 

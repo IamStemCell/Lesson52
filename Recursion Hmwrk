@@ -72,4 +72,22 @@ def is_palindrome(looking_str: str, index: int = 0) -> bool:
     pass    
 #code starts here 
 
+from typing import Optional
+
+def is_palindrome(looking_str: str, index: int = 0) -> bool:
+    if len(looking_str) <= 1:
+        return True
+    elif looking_str[0] != looking_str[-1]:
+        return False
+    else:
+        return is_palindrome(looking_str[1:-1])
+
+
+assert is_palindrome('mom') == True
+assert is_palindrome('sassas') == True
+assert is_palindrome('o') == True
+assert is_palindrome('river') == False
+
+
+
 

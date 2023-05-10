@@ -179,4 +179,10 @@ def sum_digits(digit_string: str) -> int:
     digits = [int(d) for d in digit_string]
     return sum_digits_sub(digits, 0)
 
+assert sum_of_digits('26') == 8
+try:
+    sum_of_digits('test')
+except ValueError as e:
+    assert str(e) == "input string must be digit string"
+
 
